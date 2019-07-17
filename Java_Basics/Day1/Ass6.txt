@@ -1,0 +1,32 @@
+public class Solution{
+	public static void main(String[] args) {
+		int inVal = 10;
+		float floatVal = 3.3f;
+		String typeString = "Helllooo";
+		boolean bool1 = true;
+		boolean bool2 = false;
+		boolean bool3 = true;
+		
+		System.out.println("Arithmetic");
+		System.out.println(inVal + " %" + floatVal + "=" + (inVal%floatVal));
+		
+		System.out.println("String");
+		System.out.println("Day1" + 2 + 3 + " Assignment" + "=" + (2+3));
+		
+		System.out.println("Equality");
+		System.out.println(inVal + " == " + floatVal + "=" + (inVal==floatVal));
+		
+		floatVal = 10.0f;
+		System.out.println(inVal + " == " + floatVal + " = "
+		+(inVal==floatVal));
+		System.out.println();
+		bool2 = false;
+		if(bool1 || (bool1 && (bool2=false))){
+		System.out.println("Success");
+		}
+		else{
+		System.out.println("Failure");
+		}
+		System.out.println("bool2 value : " + bool2);
+	}
+}

@@ -1,0 +1,11 @@
+public class JaggedArray{
+	public static void main(String[] args) {
+		String students[][] = {{"Tony","Java","C","C++"},{"Thomas","Java","Unix",""},{"Dinil","Linux","Oracle",""},{"Delvin","RDBMS","C#","ORACLE"}};
+		for(int i= 0; i<4;i++) {
+			System.out.println(students[3][i]);
+		}
+		
+	}
+	
+	
+}

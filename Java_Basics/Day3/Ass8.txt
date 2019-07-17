@@ -1,0 +1,78 @@
+
+public class Student {
+	private int studentId;
+	private String residentialStatus;
+	private char studentType;
+	private String studentName;
+	private double feesPerMonth;
+	public Student() {
+		
+	}
+	public Student(int id, char studentType, String fName, String lName) {
+		this.studentId = id;
+		this.studentType = studentType;
+		this.studentName = fName + " "+ lName;
+		
+	}
+
+	public static void main(String[] args) {
+		Student student2 = new Student(12, 'F', "Bill", "Gates");
+		String status = "Hostelite";
+		student2.setResidentialStatus(status);
+		if(status.equals("Hostelite")) {
+			student2.calculateFees(7000.00);
+		}else {
+			student2.calculateFees(7000.00, 3000.00);
+		}
+		
+		
+		System.out.println("Student Id: "+ student2.getStudentId());
+		System.out.println("Student Status: "+ student2.getResidentialStatus());
+		System.out.println("Student Name: "+ student2.getStudentName());
+		System.out.println("Student fee: "+ student2.getFeesPerMonth());
+		
+		
+		
+	}
+	public void setResidentialStatus(String residentialStatus) {
+		this.residentialStatus = residentialStatus;
+	}
+	public String getStudentName() {
+		return studentName;
+	}
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public String getResidentialStatus() {
+		return residentialStatus;
+	}
+	public void setStudentName(String fName, String lName) {
+		this.studentName = fName + lName;
+	}
+	public double getFeesPerMonth() {
+		return feesPerMonth;
+	}
+	public void setFeesPerMonth(double feesPerMonth) {
+		this.feesPerMonth = feesPerMonth;
+	}
+
+	public char getStudentType() {
+		return studentType;
+	}
+
+	public void setStudentType(char studentType) {
+		this.studentType = studentType;
+	}
+
+	public void calculateFees(double semesterFees){ 
+		feesPerMonth = semesterFees / 6.0; 
+	} 
+	public void calculateFees(double semesterFees,double hostelFees){ 
+		feesPerMonth = semesterFees / 6.0; 
+		feesPerMonth = feesPerMonth+ hostelFees; 
+	} 
+
+}

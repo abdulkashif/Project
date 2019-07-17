@@ -1,0 +1,48 @@
+
+public class Student {
+	private int studentId;
+	private char studentType;
+	private String studentName;
+	public Student() {
+		this.studentId = 10;
+		this.studentType = 'F';
+	}
+	public Student(int id, char studentType, String fName, String lName) {
+		this.studentId = id;
+		this.studentType = studentType;
+		this.studentName = fName + " "+ lName;
+		
+	}
+	public static void main(String[] args) {
+		Student student1;
+		student1 = new Student();
+		student1.setStudentName("Faqru", " lol");
+		System.out.println("Student Id: "+ student1.getStudentId());
+		System.out.println("Student Type: "+ student1.getStudentType());
+		System.out.println("Student Type: "+ student1.getStudentName());
+		
+		Student student2 = new Student(12, 'F', "Bill", "Gates");
+		System.out.println("Student Id: "+ student2.getStudentId());
+		System.out.println("Student Type: "+ student2.getStudentType());
+		System.out.println("Student Type: "+ student2.getStudentName());
+		
+	}
+	public String getStudentName() {
+		return studentName;
+	}
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public char getStudentType() {
+		return studentType;
+	}
+	public void setStudentName(String fName, String lName) {
+		this.studentName = fName + lName;
+	}
+
+	
+
+}
